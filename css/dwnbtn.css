@@ -1,0 +1,93 @@
+/* main download button */
+/*non svg img style*/
+.icon {
+  display: inline-block;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.icon:hover,
+.icondark:hover,
+.icondark:focus,
+.icon:focus {
+  /*filter: brightness(115%);*/
+}
+
+.icondark {
+  display: none;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.dwnbtn2 {
+  display: inline-block;
+  background: linear-gradient(to right, #208fff 50%, #2f67baff 100%); /*rgb(32, 143, 255)*/
+  color: white;
+  cursor: pointer;
+  font-size: 55px;
+  font-family: sans-serif;
+  font-weight: 400;
+  left: 50%;
+  margin: 2px 0px 1px 0px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.05em; /*2px*/
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 6px rgba(0 0 0 0.16));
+  position: relative;
+  transform: translateX(-50%);
+  background-size: 200%;
+  background-position: right 0;
+  transition: background-position 285ms ease-in;
+  box-shadow: 0 8px 16px 0 rgba(0 0 0 0.2), 0 6px 20px 0 rgba(0 0 0 0.19);
+  width: auto;
+  max-width: 75%;
+}
+
+.dwnbtn2:hover {
+  background-position: 0 0;
+}
+
+@keyframes AnimationName {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 20%}
+	100%{background-position:0% 50%}
+}
+
+/* DARK THEME */
+@media (prefers-color-scheme: dark) {
+  .icon {
+    display: none;
+  }
+
+  .icondark {
+    display: inline-block;
+  }
+
+  .dwnbtn2 {
+    /*color: #b7b7b7;*/
+    color: #6cadf0;
+    background: linear-gradient(to right, #1669bb 25%, #1a1a1a 100%);
+    background-size: 200%;
+    background-position: right 0;
+    border:2px solid #1669bb;
+    margin: 0;
+  }
+  .dwnbtn2:hover {
+    color: #6cadf0 !important;
+    background-position: 0 0;
+  }
+}
+
+@media only screen and (max-width: 760px) and (orientation: portrait) {
+  .icon,
+  .icondark {
+    max-width: 75%;
+    width: auto;
+  }
+}
